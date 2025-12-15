@@ -49,7 +49,7 @@ export default function Header() {
               </li>
               <li>
                 <NavLink
-                  to={"/about"}
+                  to={"/about"} // auto detect which page to render/show.
                   // isActive automatically detect krta hum is page/home navlink pr active hai ki ni.
                   // nhi hai to kuch kaam krega hai to kuch. if else.
                   className={(isActive) =>
@@ -59,6 +59,20 @@ export default function Header() {
                   }
                 >
                   About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"/contact"}
+                  // isActive automatically detect krta hum is page/home navlink pr active hai ki ni.
+                  // nhi hai to kuch kaam krega hai to kuch. if else.
+                  className={(isActive) =>
+                    `block py-2 pr-4 pl-3 duration-200 ${
+                      isActive ? "text-orange-700" : "text-gray-700"
+                    } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                  }
+                >
+                  Contact
                 </NavLink>
               </li>
             </ul>

@@ -12,6 +12,8 @@ import Layout from "./Layout.jsx";
 import About from "./components/About/About.jsx";
 import Home from "./components/Home/Home.jsx";
 import Contact from "./components/Contact/Contact.jsx";
+import User from "./components/User/User.jsx";
+import Github, { githubInfoLoader } from "./components/Github/Github.jsx";
 
 // routing ka kaam kar rha jab bhi new route build krege usey children mai add krna pdega.
 // const router = createBrowserRouter([
@@ -40,8 +42,12 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
-      <Route path="about" element={<About />} />
+      <Route path="about" element={<About />}>
+        {/* <Route path="kailash" /> we can do another nesting inside route. /about/kailash */}
+      </Route>
       <Route path="contact" element={<Contact />} />
+      <Route path="user/:userid" element={<User />} />
+      <Route path="github" element={<Github />} loader={githubInfoLoader} />
     </Route>
   )
 );

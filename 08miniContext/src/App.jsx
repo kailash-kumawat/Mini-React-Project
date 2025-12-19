@@ -14,8 +14,6 @@ function App() {
       <Profile />
     </UserContextProvider>
   );
-  // next ->
-  // create componnt and import here to see how we get access from provider.
 }
 
 export default App;

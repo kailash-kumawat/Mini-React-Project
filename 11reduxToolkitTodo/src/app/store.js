@@ -1,6 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { todoSlice } from "../features/todo/todoslice";
+import  todoReducer  from "../features/todo/todoslice.js";
 
 export const store = configureStore({
-  reducer: todoSlice,
+  reducer: todoReducer,
 });
+
+// dispatch and selector hook next
